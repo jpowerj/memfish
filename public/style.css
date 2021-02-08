@@ -1,0 +1,133 @@
+/* styles */
+/* called by your view template */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 12px;
+}
+
+body {
+  font-family: helvetica, arial, sans-serif;
+  margin: 25px;
+}
+
+h1 {
+  font-weight: bold;
+  font-size: 48px;
+  color: Indigo;
+  margin-bottom: 0;
+}
+
+header {
+  margin-bottom: 2em;
+  text-align: center;
+}
+
+footer {
+  margin-top: 50px;
+  padding-top: 25px;
+  border-top: 1px solid lightgrey;
+}
+
+footer > a {
+  color: #BBBBBB;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/*
+.filter-group {
+  min-height: 240px;
+}
+*/
+
+form {
+  background-color: white!important;
+  border: 1px solid #777;
+  border-radius: 5px;
+  box-shadow: 2px 2px 0 2px rgba(0, 0, 0, 0.2);
+  padding: 0.5em;
+  margin-left: 1em;
+  margin-bottom: 1em;
+}
+
+.gallery-card {
+  min-height: 240px;
+  width: 300px;
+
+  border: 1px solid #777;
+  border-radius: 5px;
+  box-shadow: 2px 2px 0 2px rgba(0, 0, 0, 0.2);
+  padding: 0.5em;
+  margin-left: 1em;
+  margin-bottom: 1em;
+}
+
+.gallery-card img {
+  border-radius: 5px;
+  margin-bottom: 0.5em;
+  width: 100%;
+}
+
+.gallery-card .gallery-title {
+  font-size: 18px;
+  //margin-right: 10px;
+}
+
+.gallery-card .gallery-subtitle {
+  font-size: 12px;
+}
+
+.full-card {
+  /* Since it's just a single card on the page, it should expand to fill the container(?) */
+  min-height: 320px;
+  width: 400px;
+
+  border: 1px solid #777;
+  border-radius: 5px;
+  box-shadow: 2px 2px 0 2px rgba(0, 0, 0, 0.2);
+  padding: 0.5em;
+  margin-left: 1em;
+  margin-bottom: 1em;
+}
+
+.label {
+  border: 1px solid black;
+  padding-left: 3px;
+  padding-right: 3px;
+  padding-top: 1px;
+  padding-bottom: 1px;
+  font-size: 9px;
+  font-weight: bold;
+}
+
+.label-as-badge {
+  border-radius: 1em;
+}
+
+.label-ent-group {
+  background-color: #cfdfff!important;
+}
+
+.label-ent-person {
+  background-color: #d0f0fd!important;
+}
+
+.label-ent-event {
+  background-color: #fee2d5!important;
+}
+
+.label-ent-year {
+  /* light yellow */
+  background-color: #ffeab6!important;
+}
+
+button.disabled:hover {
+  cursor: default;
+}

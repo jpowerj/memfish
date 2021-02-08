@@ -1,0 +1,78 @@
+<!-- This is a static file -->
+<!-- served from your routes in server.js -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MemFish</title>
+    <meta name="description" content="Rendering flashcards from Airtable" />
+    <link
+      id="favicon"
+      rel="icon"
+      href="https://glitch.com/favicon.ico"
+      type="image/x-icon"
+    />
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="/glitch_customized.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!--
+      <header>
+        <h1>
+          Spaced Repetition Practice
+        </h1>
+      </header>
+      -->
+      <header>
+        <!-- Fixed navbar -->
+        <nav class="navbar navbar-dark navbar-expand-lg py-0" role="navigation">
+          <a class="navbar-brand font-weight-bold logo p-0" href="/">mem.fish</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse py-0" id="navbarCollapse">
+            <ul class="navbar-nav mr-auto align-auto p-0">
+              <li class="nav-item {{^viewall}}active{{/viewall}} py-0">
+                <a class="nav-link py-0" href="/">Practice</a>
+              </li>
+              <li class="nav-item {{#viewall}}active{{/viewall}} py-0">
+                <a class="nav-link py-0" href="/all">View All</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+
+      <main id="data-container">
+        Loading...
+      </main>
+      <footer class="footer text-center small">&copy; 2020 <a href="https://cs.stanford.edu/~jjacobs3">Jeff Jacobs</a></footer>
+    </div>
+    <!-- end container -->
+
+    <!-- Your web-app is https, so your scripts need to be too -->
+    <script
+      src="https://code.jquery.com/jquery-2.2.1.min.js"
+      integrity="sha256-gvQgAFzTH6trSrAWoH1iPo9Xc96QxSZ3feW6kem+O00="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <!-- Last but extremely not least, load the correct client. This is v janky and
+    should be re-done the real web app way... -->
+    {{#viewall}} <script src="/client_viewall.js"></script> {{/viewall}}
+    {{^viewall}} <script src="/client.js"></script> {{/viewall}}
+    
+  </body>
+</html>

@@ -1,0 +1,60 @@
+<!-- This is a static file -->
+<!-- served from your routes in server.js -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Cold War Flashcards</title>
+    <meta name="description" content="Rendering flashcards from Airtable" />
+    <link
+      id="favicon"
+      rel="icon"
+      href="https://glitch.com/favicon.ico"
+      type="image/x-icon"
+    />
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>
+          Cold War Flashcards: View All
+        </h1>
+      </header>
+
+      <main id="data-container">
+        Loading...
+      </main>
+
+      <!--
+      <script
+        src="https://button.glitch.me/button.js"
+        data-style="glitch"
+      ></script>
+      <div
+        class="glitchButton"
+        style="position:fixed;top:20px;right:20px;"
+      ></div>
+      -->
+    </div>
+    <!-- end container -->
+
+    <!-- Your web-app is https, so your scripts need to be too -->
+    <script
+      src="https://code.jquery.com/jquery-2.2.1.min.js"
+      integrity="sha256-gvQgAFzTH6trSrAWoH1iPo9Xc96QxSZ3feW6kem+O00="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="/client_viewall.js"></script>
+  </body>
+</html>
